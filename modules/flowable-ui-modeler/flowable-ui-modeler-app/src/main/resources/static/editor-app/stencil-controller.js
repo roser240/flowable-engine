@@ -614,7 +614,7 @@ angular.module('flowableModeler')
 
         /* Click handler for clicking a property */
         $scope.propertyClicked = function (index) {
-            if (!$scope.selectedItem.properties[index].hidden) {
+            if (!$scope.selectedItem.properties[index].hidden && $scope.selectedItem.properties[index].title !== "命名空间") {
                 $scope.selectedItem.properties[index].mode = "write";
             }
         };
